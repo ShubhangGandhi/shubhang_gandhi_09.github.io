@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHUBHANG SHRIKANT GANDHI | Electronics Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --secondary: #10b981;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --gray: #94a3b8;
+      --accent: #f59e0b;
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --section-bg: rgba(255, 255, 255, 0.85);
+    }
+    
+    * { 
+      scroll-behavior: smooth; 
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--light);
+      text-align: center;
+      padding: 100px 20px 60px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease-out;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd' opacity='0.1'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      margin-bottom: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+      transition: all 0.5s ease;
+    }
+    
+    header img:hover {
+      transform: scale(1.05) rotate(5deg);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      opacity: 0.9;
+    }
+    
+    nav {
+      background-color: var(--dark);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      margin: 10px 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 5px 10px;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+    
+    nav a:hover {
+      color: var(--accent);
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    nav a i {
+      margin-right: 8px;
+      font-size: 0.9rem;
+    }
+    
+    section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 50px 40px;
+      background-color: var(--section-bg);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(5px);
+      animation: fadeInUp 0.8s ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    }
+    
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-dark);
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60%;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    
+    .project {
+      background: var(--card-bg);
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease;
+      border-left: 4px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      border-left-color: var(--primary);
+    }
+    
+    .project::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(16, 185, 129, 0.03) 100%);
+      z-index: 0;
+    }
+    
+    .project h3 {
+      font-size: 1.4rem;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .project p {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 10px;
+    }
+    
+    .project strong {
+      color: var(--primary);
+    }
+    
+    .project em {
+      color: var(--secondary);
+      font-style: normal;
+      font-weight: 500;
+    }
+    
+    footer {
+      background: linear-gradient(135deg, var(--dark) 0%, #0f172a 100%);
+      color: var(--light);
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 80px;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    
+    .social-links a {
+      color: var(--light);
+      font-size: 1.5rem;
+      margin: 0 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .contact-item i {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+    
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    
+    a:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+    
+    ul {
+      padding-left: 25px;
+      margin-bottom: 20px;
+    }
+    
+    li {
+      margin-bottom: 8px;
+      position: relative;
+    }
+    
+    li::before {
+      content: '▹';
+      position: absolute;
+      left: -20px;
+      color: var(--primary);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        padding: 80px 20px 40px;
+      }
+      
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      header p {
+        font-size: 1rem;
+      }
+      
+      nav a {
+        margin: 5px 10px;
+        font-size: 0.9rem;
+      }
+      
+      section {
+        padding: 30px 20px;
+        margin: 20px 15px;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .project {
+        padding: 20px;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+    
+    /* Floating elements animation */
+    .floating {
+      animation: floating 6s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    /* Tooltip for certifications */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: var(--dark);
+      color: var(--light);
+      text-align: center;
+      border-radius: 6px;
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 0.9rem;
+      font-weight: normal;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    /* Timeline effect for experience */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 2px solid var(--light);
+      box-shadow: 0 0 0 3px var(--primary);
+    }
+    
+    /* Skill bars */
+    .skill-bar {
+      width: 100%;
+      background-color: #e2e8f0;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    
+    .skill-progress {
+      height: 10px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 10px;
+      transition: width 1.5s ease;
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="floating">
+      <img src="https://i.ibb.co/KKfLkkd/shubhang-photo.jpg" alt="SHUBHANG SHRIKANT GANDHI">
+    </div>
+    <h1>SHUBHANG SHRIKANT GANDHI</h1>
+    <p>Driven by Curiosity, Powered by Purpose, and Guided by Innovation.</p>
+  </header>
+  
+  <nav>
+    <a href="#about"><i class="fas fa-user"></i> About Me</a>
+    <a href="#qualifications"><i class="fas fa-graduation-cap"></i> Qualifications</a>
+    <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="#research"><i class="fas fa-flask"></i> Research</a>
+    <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+    <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="project">
+      <p>Hello! I'm <strong>Shubhang Shrikant Gandhi</strong>, a passionate and innovative Electronics & Telecommunication Engineering student at PCCOE Pune. My journey in engineering is fueled by an enduring curiosity and a strong desire to build real-world solutions that create meaningful impact. I immerse myself in a diverse array of technologies—from embedded systems and automation to power electronics and digital design—constantly exploring new ways to bridge theoretical concepts with practical applications.</p>
+      <p>I take pride in my ability to think critically, solve problems creatively, and lead with a collaborative spirit. Whether it's designing a smart device, optimizing a circuit, or prototyping a functional model, I approach every challenge with a mindset focused on innovation, efficiency, and sustainability. I believe that engineering is not just about solving problems—it's about envisioning new possibilities and translating them into reality.</p>
+      <p>With a deep appreciation for research, teamwork, and lifelong learning, I aspire to contribute to technological advancement in ways that are both practical and transformative. My mission is to merge knowledge with purpose and empower the future through engineering. Let's work together to imagine, design, and build a smarter, brighter tomorrow.</p>
+    </div>
+  </section>
+
+  <section id="qualifications">
+    <h2>Qualifications</h2>
+    
+    <div class="project">
+      <h3>B.Tech in Electronics & Telecommunication Engineering</h3>
+      <p><strong>Pimpri Chinchwad College of Engineering, Pune</strong><br>
+      <em>2023 – 2027</em></p>
+      <p>Currently pursuing my undergraduate degree with a CGPA of <strong>8.6/10</strong>. The program has equipped me with in-depth knowledge of electronic systems, signal processing, communication networks, embedded systems, and power electronics. I've actively contributed to technical projects, competitions, and research-oriented activities, emphasizing both academic excellence and hands-on innovation.</p>
+    </div>
+    
+    <div class="project">
+      <h3>Higher Secondary Certificate (HSC)</h3>
+      <p><strong>Pemraj Sarda College, Ahmednagar – Maharashtra State Board</strong></p>
+      <p>Successfully completed my higher secondary education with a strong foundation in Physics, Chemistry, and Mathematics. This phase laid the groundwork for my analytical thinking and inspired my interest in electronics and real-world problem solving.</p>
+    </div>
+    
+    <div class="project">
+      <h3>Secondary School Certificate (SSC)</h3>
+      <p><strong>St. Michael's School, Ahmednagar – CBSE</strong></p>
+      <p>Developed a disciplined academic routine and built strong foundational skills in science, mathematics, and logical reasoning. Participated in science exhibitions, interschool competitions, and early-stage practical electronics exploration.</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="project">
+          <h3>Python Programming Internship</h3>
+          <p><strong>CodSoft</strong> &mdash; <em>September 2024</em></p>
+          <p>Completed a hands-on internship where I worked on Python-based programming tasks, including automation scripts, data handling, and project-based logic implementation. This experience helped sharpen my coding proficiency, problem-solving approach, and real-time debugging abilities in Python.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="project">
+          <h3>Design Team Member</h3>
+          <p><strong>Microsoft Learn Student Chapter – PCCOE</strong> &mdash; <em>January 2025 – Present</em></p>
+          <p>Collaborated with peers to conceptualize, design, and deliver promotional materials, digital assets, and documentation for tech events and workshops. Gained experience in team collaboration, content strategy, and using design tools effectively in an academic club environment.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="project">
+          <h3>Internship – Industrial Automation Exposure</h3>
+          <p><strong>Shriroop Industries, Ahmednagar</strong> &mdash; <em>26th May – 2nd June, 4 weeks</em></p>
+          <p>Gained practical exposure to industrial workflows, production management, and automation systems used in a real manufacturing setup. Worked alongside engineers and supervisors to understand operational technologies, quality control, and system integration methods in the field of process engineering and manufacturing excellence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research & Publications</h2>
+    
+    <div class="project">
+      <h3>Laboratory Power Supply – Copyrighted Innovation</h3>
+      <p><strong>Certificate ID:</strong> L-154646/2024</p>
+      <p>This project involves the design and implementation of an advanced laboratory power supply unit featuring short circuit protection, overload indicators, temperature-controlled cooling, and high accuracy using multiturn potentiometers. The system is tailored for educational labs and R&D facilities, ensuring user safety and circuit integrity. This work is officially copyrighted for its innovation and originality.</p>
+    </div>
+    
+    <div class="project">
+      <h3>Research Contributions</h3>
+      <p><strong>Domains:</strong> Smart Cleaning Robots, Energy Harvesting, Automation Systems</p>
+      <p>Conducted exploratory and applied research on smart robotic cleaning solutions, self-powered circuits using piezoelectric modules, and microcontroller-based automation frameworks. These projects highlight a commitment to sustainable engineering and intelligent systems that respond to real-world challenges with minimal human intervention.</p>
+    </div>
+  </section>
+
+<section id="certifications">
+    <h2>Certifications & Achievements</h2>
+    <div class="certifications-grid">
+        <!-- Technical Certifications -->
+        <div class="certification-card">
+            <div class="certification-header">
+                <i class="fas fa-code"></i>
+                <div class="certification-meta">
+                    <h3>Prompt Engineering</h3>
+                    <div class="issuer-date">
+                        <span class="issuer">Infosys</span>
+                        <span class="date">May 2025</span>
+                    </div>
+                </div>
+            </div>
+            <div class="certification-footer">
+                <div class="certification-id">
+                    <span>Category:</span>
+                    <span>AI Development</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="certification-card">
+            <div class="certification-header">
+                <i class="fas fa-microchip"></i>
+                <div class="certification-meta">
+                    <h3>Microcontrollers & Coding</h3>
+                    <div class="issuer-date">
+                        <span class="issuer">Infosys</span>
+                        <span class="date">Mar 2025</span>
+                    </div>
+                </div>
+            </div>
+            <div class="certification-footer">
+                <div class="certification-id">
+                    <span>Focus Area:</span>
+                    <span>Embedded Systems</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="certification-card">
+            <div class="certification-header">
+                <i class="fas fa-satellite-dish"></i>
+                <div class="certification-meta">
+                    <h3>Remote Sensing & GIS</h3>
+                    <div class="issuer-date">
+                        <span class="issuer">ISRO-IIRS</span>
+                        <span class="date">Jan 2025</span>
+                    </div>
+                </div>
+            </div>
+            <div class="certification-footer">
+                <div class="certification-id">
+                    <span>Application:</span>
+                    <span>Geospatial Technology</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Development -->
+        <div class="certification-card professional">
+            <div class="certification-header">
+                <i class="fas fa-balance-scale"></i>
+                <div class="certification-meta">
+                    <h3>Indian Constitution</h3>
+                    <div class="issuer-date">
+                        <span class="issuer">Nalsar University</span>
+                        <span class="date">Core Knowledge</span>
+                    </div>
+                </div>
+            </div>
+            <div class="certification-footer">
+                <div class="certification-id">
+                    <span>Focus:</span>
+                    <span>Legal Framework</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PCB Designing -->
+        <div class="certification-card">
+            <div class="certification-header">
+                <i class="fas fa-project-diagram"></i>
+                <div class="certification-meta">
+                    <h3>PCB Designing</h3>
+                    <div class="issuer-date">
+                        <span class="issuer">Altium Education</span>
+                        <span class="date">Feb 2025</span>
+                    </div>
+                </div>
+            </div>
+            <div class="certification-footer">
+                <div class="certification-id">
+                    <span>Toolkit:</span>
+                    <span>Altium Designer</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Science -->
+        <div class="certification-card">
+            <div class="certification-header">
+                <i class="fas fa-chart-line"></i>
+                <div class="certification-meta">
+                    <h3>Data Science Workshop</h3>
+                    <div class="issuer-date">
+                        <span class="issuer">3RITechnologies</span>
+                        <span class="date">Jan 2025</span>
+                    </div>
+                </div>
+            </div>
+            <div class="certification-footer">
+                <div class="certification-id">
+                    <span>Skills:</span>
+                    <span>Data Analysis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Registration -->
+        <div class="certification-card academic">
+            <div class="certification-header">
+                <i class="fas fa-copyright"></i>
+                <div class="certification-meta">
+                    <h3>Laboratory Power Supply</h3>
+                    <div class="issuer-date">
+                        <span class="issuer">Govt. of India</span>
+                        <span class="date">2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="certification-footer">
+                <div class="certification-id">
+                    <span>Credential ID:</span>
+                    <span>L-154646/2024</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add remaining certifications with proper icons -->
+    </div>
+</section>
+
+<style>
+/* Updated Certification Styles */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.certification-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border-left: 4px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certification-header i {
+    font-size: 2rem;
+    color: var(--primary);
+    min-width: 50px;
+    text-align: center;
+}
+
+.professional .certification-header i {
+    color: var(--secondary);
+}
+
+.academic .certification-header i {
+    color: var(--accent);
+}
+
+/* Ensure all icons are visible */
+.fa-code,
+.fa-microchip,
+.fa-satellite-dish,
+.fa-balance-scale,
+.fa-project-diagram,
+.fa-chart-line,
+.fa-copyright {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certification-header {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+</style>
+  <section id="projects">
+    <h2>Projects</h2>
+    
+    <div class="project">
+      <h3>CNC PLOTTER</h3>
+      <p>A CNC (Computer Numerical Control) plotter is a versatile machine used for precise drawing, engraving, and plotting tasks. The plotter uses an Arduino UNO as its central controller and integrates mechanical and electronic components for accurate and efficient plotting. (May 2024 – Jul 2024)</p>
+    </div>
+    
+    <div class="project">
+      <h3>ELECTRO HEATING DISK</h3>
+      <p>A portable and efficient heating disk built from brass. Operates at 12V, 3A with integrated temperature monitoring and control. (Dec 2023)</p>
+    </div>
+    
+    <div class="project">
+      <h3>DIGITAL STORAGE OSCILLOSCOPE [DSO]</h3>
+      <p>The DSO138 is a basic, portable digital storage oscilloscope built for analyzing signals. Ideal for beginners and academic use. (May 2023 – Jul 2023)</p>
+    </div>
+    
+    <div class="project">
+      <h3>FIXED 5V POWER SUPPLY</h3>
+      <p>A robust 5V regulated power source with built-in safety features for powering various low-voltage electronic devices. (May 2023 – Jun 2023)</p>
+    </div>
+    
+    <div class="project">
+      <h3>AUTOMATED OBJECT COUNTING SYSTEM</h3>
+      <p>Uses LDR sensors, ICs (74LS90, 7447), and AND gates to count up to 99 objects. Features an auto 5-count function. (Dec 2022 – Jan 2023)</p>
+    </div>
+    
+    <div class="project">
+      <h3>ELECTROMAGNETIC INDUCTION HEATING DEVICE</h3>
+      <p>A portable induction heater using the principle of electromagnetic induction. Efficient for small-scale material heating. (Oct 2022 – Nov 2022)</p>
+    </div>
+    
+    <div class="project">
+      <h3>PAN TILT CAMERA</h3>
+      <p>Built using ESP32-CAM for wireless surveillance. Offers real-time monitoring with remote pan and tilt control. (May 2022 – Jun 2022)</p>
+    </div>
+    
+    <div class="project">
+      <h3>AUTOMATIC DRIP IRRIGATION SYSTEM</h3>
+      <p>Uses soil moisture sensors and Arduino to automate garden and field irrigation. Optimizes water usage. (Apr 2022 – May 2022)</p>
+    </div>
+    
+    <div class="project">
+      <h3>BLUETOOTH SPEAKER</h3>
+      <p>Wireless audio system with strong bass and clarity. Designed for portability and seamless Bluetooth connectivity. (Mar 2022 – Apr 2022)</p>
+    </div>
+    
+    <div class="project">
+      <h3>LABORATORY POWER SUPPLY</h3>
+      <p>Adjustable power supply for electronics testing. Features overload/short-circuit protection and multiturn controls. (Dec 2021 – Jan 2022)</p>
+    </div>
+    
+    <div class="project">
+      <h3>SMART LOCKER</h3>
+      <p>Security system using Arduino UNO, keypad, and electromagnetic lock. Designed for personal item protection. (Oct 2021 – Nov 2021)</p>
+    </div>
+    
+    <div class="project">
+      <h3>CROP GUARD</h3>
+      <p>Protects crops using sensors and servo motors to deploy a roof during heavy rain. Solar-powered with backup. (Jan 2021 – Feb 2021)</p>
+    </div>
+    
+    <div class="project">
+      <h3>SMART CLEANER ROBOT</h3>
+      <p>Arduino-based autonomous cleaner using a motor driver, Bluetooth module, and vacuum mechanism. (Dec 2020)</p>
+    </div>
+    
+    <div class="project">
+      <h3>AUTOMATIC SANITIZER MACHINE</h3>
+      <p>LDR sensor-based contactless sanitizer dispenser without microcontroller. Uses basic electronics. (Feb 2020)</p>
+    </div>
+    
+    <div class="project">
+      <h3>MINI INVERTER</h3>
+      <p>Cost-effective inverter solution for powering small devices. Compact, reliable, and used in competitions. (Nov 2019 – Dec 2019)</p>
+    </div>
+    
+    <div class="project">
+      <h3>DRILL MACHINE</h3>
+      <p>Multi-purpose drill tool with dual power modes (19V AC / 12V battery). Designed for portability. (Mar 2019 – Apr 2019)</p>
+    </div>
+    
+    <div class="project">
+      <h3>AQUASTOP OVERFLOW PROTECTION SYSTEM</h3>
+      <p>Simple 12V LED and buzzer circuit to alert users when a water container is full. Prevents spillage. (Oct 2018 – Nov 2018)</p>
+    </div>
+  </section>
+
+<!-- Professional Contact Section -->
+<section id="contact">
+    <h2>Professional Contact</h2>
+    <div class="contact-container">
+        <div class="contact-grid">
+            <!-- Email Card -->
+            <div class="contact-card email-card">
+                <div class="contact-header">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Communication</h3>
+                </div>
+                <div class="contact-body">
+                    <a href="mailto:gandhishubhang09@gmail.com" class="contact-link">
+                        gandhishubhang09@gmail.com
+                      
+                        </span>
+                    </a>
+                    <p class="contact-note">Preferred method for formal inquiries<br>
+                    <span>Response Time: 24-48 hours</span></p>
+                </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-card phone-card">
+                <div class="contact-header">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Direct Call</h3>
+                </div>
+                <div class="contact-body">
+                    <a href="tel:+918180002836" class="contact-link">
+                        +91 81800 02836
+
+                        </span>
+                    </a>
+                    <p class="contact-note">Available for urgent matters<br>
+                    <span>Hours: Mon-Fri 9AM - 5PM IST</span></p>
+                </div>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <div class="contact-card linkedin-card">
+                <div class="contact-header">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>Professional Network</h3>
+                </div>
+                <div class="contact-body">
+                    <a href="https://linkedin.com/in/shubhang-gandhi" target="_blank" class="linkedin-profile">
+                        View LinkedIn Profile
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <p class="contact-note">Connect for collaborations and opportunities</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Contact Section Styles */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contact-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-header i {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.contact-header h3 {
+    font-size: 1.3rem;
+    color: var(--dark);
+}
+
+.contact-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--dark);
+    text-decoration: none;
+    padding: 0.8rem 0;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.contact-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+.contact-note span {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.linkedin-profile {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.linkedin-profile:hover {
+    background: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+}
+</style>
+
+<script>
+function copyEmail() {
+    navigator.clipboard.writeText('gandhishubhang09@gmail.com');
+    alert('Email address copied to clipboard!');
+}
+
+function copyPhone() {
+    navigator.clipboard.writeText('+918180002836');
+    alert('Phone number copied to clipboard!');
+}
+</script>
+
+  <footer>
+    <div class="social-links">
+      <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/shubhang-gandhi" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2025 <span class="gradient-text">SHUBHANG SHRIKANT GANDHI</span> | All Rights Reserved</p>
+    <p>Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> by Shubhang</p>
+  </footer>
+
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Back to top button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('active');
+      } else {
+        backToTopButton.classList.remove('active');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Image fallback
+    document.querySelector('img').onerror = function() {
+      this.src = 'https://via.placeholder.com/180x180?text=Shubhang+Gandhi';
+    };
+    
+    // Animate elements when they come into view
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('section, .project');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementPosition < windowHeight - 100) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    
+    // Initialize elements with opacity 0 for animation
+    document.querySelectorAll('section, .project').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+    
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+  </script>
+</body>
+</html>
